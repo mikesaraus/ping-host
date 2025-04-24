@@ -60,7 +60,7 @@ def try_subnet(base_ip, resume_from=None, ssid=None, dns=None, os_type="Linux", 
         print(f"🔄 Trying gateway: {gateway} with IP {static_ip}")
         if set_static_ip(static_ip, gateway, ssid, dns, os_type):
             go_connect = True
-            if os_type != "Darwin" and reconnect(ssid):
+            if os_type != "Darwin" and not reconnect(ssid):
                 go_connect = False
             if go_connect:
                 time.sleep(2)
