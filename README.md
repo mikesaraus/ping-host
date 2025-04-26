@@ -42,3 +42,4 @@ sudo python3 ping-host.py
 | `--skip-gateways`    | JSON str | `["192.168.0.1", "192.168.1.1"]` | Gateways to skip (useful for avoiding duplicates or known devices) |
 | `--hosts`            | string   | `None`                           | Subnet pattern to scan (e.g. `192.168.*.*`, `172.16.10.*`)         |
 | `--known-host`       | flag     | `False`                          | Restrict gateway suffixes to only `.1` (use with `--hosts`)        |
+| `--ping-sec`         | int      | `2`                              | Timeout duration (in seconds) for ping attempts                    |
